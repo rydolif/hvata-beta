@@ -1,0 +1,46 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+
+
+@include font('Exo2', normal, 900, '../webfonts/Exo2-Black.woff2')
+@include font('Exo2', italic, 900, '../webfonts/Exo2-BlackItalic.woff2')
+
+@include font('Exo2', normal, 800, '../webfonts/Exo2-ExtraBold.woff2')
+@include font('Exo2', italic, 800, '../webfonts/Exo2-ExtraBoldItalic.woff2')
+
+@include font('Exo2', normal, 700, '../webfonts/Exo2-Bold.woff2')
+@include font('Exo2', italic, 700, '../webfonts/Exo2-BoldItalic.woff2')
+
+@include font('Exo2', normal, 600, '../webfonts/Exo2-SemiBold.woff2')
+@include font('Exo2', italic, 600, '../webfonts/Exo2-SemiBoldItalic.woff2')
+
+@include font('Exo2', normal, 500, '../webfonts/Exo2-Medium.woff2')
+@include font('Exo2', italic, 500, '../webfonts/Exo2-MediumItalic.woff2')
+
+@include font('Exo2', normal, 400, '../webfonts/Exo2-Regular.woff2')
+@include font('Exo2', italic, 400, '../webfonts/Exo2-Light.woff2')
+
+@include font('Exo2', normal, 300, '../webfonts/Exo2-Light.woff2')
+@include font('Exo2', italic, 300, '../webfonts/Exo2-ExtraLightItalic.woff2')
+
+@include font('Exo2', normal, 200, '../webfonts/Exo2-Thin.woff2')
+@include font('Exo2', italic, 200, '../webfonts/Exo2-ThinItalic.woff2')
+
+
+
