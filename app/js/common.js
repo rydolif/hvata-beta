@@ -1,5 +1,23 @@
 $(function() {
 
+//------------------------------гамбургер-----------------------------
+  $('.hamburger').click(function() {
+    $(this).toggleClass('hamburger--active');
+    $('body').toggleClass('body--no-scroll');
+    $('.nav').toggleClass('nav--active');
+    $('.header').toggleClass('header--menu');
+    $('body').toggleClass('no-scroll');
+  });
+
+//-------------------------------активная ссилка---------------------------------------
+  $('.header__nav a').each(function () {
+      var location = window.location.href;
+      var link = this.href; 
+      if(location == link) {
+          $(this).addClass('link--active');
+      }
+  });
+
 //-------------------------------certificate slider---------------------------------------
 	var swiper = new Swiper('.certificate__slider', {
       slidesPerView: 3,

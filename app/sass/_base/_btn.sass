@@ -3,32 +3,59 @@
 	display: flex
 	align-items: center
 	justify-content: center
-	border: none
+	border: 2px solid $text--light
 	outline: none
 	background: $text
 	text-align: center
-	border-bottom: 1px solid #d2481c
-	border-right: 1px solid #d2481c
 	transition: all .6s
-	max-width: 380px
-	height: 50px
-	font-weight: 700
-	color: #fff
-	text-transform: uppercase
-	background-color: #ff5722
+	height: 45px
+	padding: 0 25px
+	background-color: #fff
 	border-radius: 5px
-	font-size: 18px
-	letter-spacing: 1px
+	color: $text--light
+	font-weight: 700
+	font-size: 16px
+	line-height: 1.1
 
 	&:hover,
 	&:focus
 		outline: none
-		text-decoration: none
 		cursor: pointer
-		background-color: #d2481c
+		color: $text--light
+		transform: translate3d(2px, -5px, -15px)
+		box-shadow: 0 0 5px 0 rgba($text--light, 1)
+	
+	&--border
+		background-color: transparent
+		border-color: $accent
+		color: $accent
+
+		&:hover,
+		&:focus
+			color: $accent
+			box-shadow: 0 0 5px 0 rgba($accent, 1)
+
+	&--green
+		background-color: $green
+		border-color: $green
 		color: #fff
 
-		span
-			right: -8vw
+		&:hover,
+		&:focus
+			color: #fff
+			box-shadow: 0 0 5px 0 rgba($green, 1)
+
+
+	&--red
+		background-color: $accent
+		border-color: $accent
+		color: #fff
+
+		&:hover,
+		&:focus
+			color: #fff
+			box-shadow: 0 0 5px 0 rgba($accent, 1)
+
+	
 
 
