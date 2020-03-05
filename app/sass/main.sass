@@ -406,7 +406,8 @@
 			margin-bottom: 0
 
 		&_header
-			padding: 20px
+			position: relative
+			padding: 20px 50px 20px 20px
 			cursor: pointer
 			line-height: 1
 			font-weight: 700
@@ -414,6 +415,18 @@
 			font-weight: 700
 			border-radius: 5px
 			background-color: #f6f6f6
+
+			span
+				display: block
+				width: 12px
+				height: 12px
+				position: absolute
+				top: 50%
+				right: 20px
+				transform: translate(0, -50%) rotate(-135deg)
+				border-top: 2px solid $text
+				border-left: 2px solid $text
+				transition: all .6s
 
 		&_content
 			padding: 15px 20px
@@ -423,8 +436,71 @@
 		background-color: $accent !important
 		color: #fff !important
 
+		span
+			border-top: 2px solid #fff
+			border-left: 2px solid #fff
+			transform: translate(0, -40%) rotate(45deg)
 
 
+.access
+	padding: 30px
+	background-color: #fff
+	border-radius: 5px
+	margin-bottom: 30px
+	
+	&__price
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin-bottom: 40px
+
+		&_item
+			background-color: #f6f6f6
+			padding: 30px 20px
+			border-radius: 5px
+			margin-right: 30px
+			font-weight: 700
+			width: 220px
+
+			span, b
+				display: block
+
+			span
+				font-size: 16px
+
+			b
+				font-size: 35px
+				font-weight: 900
+				letter-spacing: 1px
+
+			&--blue
+				background-color: $blue
+				color: #fff
+
+	&__info
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin-bottom: 40px
+
+		&_item
+			width: 25%
+			margin-right: 5%
+			padding-left: 65px
+			position: relative
+			color: $text--light
+			line-height: 1.6
+			
+			&:last-child
+				margin-right: 0
+
+			img
+				position: absolute
+				top: 50%
+				left: 0px
+				transform: translate(0, -50%)
+				width: 50px
+				height: auto
 
 
 @import "media" // Always at the end
