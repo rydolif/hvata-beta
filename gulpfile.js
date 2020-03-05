@@ -50,7 +50,6 @@ gulp.task('scripts', function() {
 		'app/libs/jquery.validate.js',
 		'app/libs/swiper/swiper.min.js', 			//----слайдер
 		'app/libs/jquery.popupoverlay.js',
-
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

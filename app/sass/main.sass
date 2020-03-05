@@ -387,11 +387,13 @@
 			display: block
 
 
-.about
+.section
 	background-color: #fff
 	border-radius: 5px
 	padding: 30px
 	margin-bottom: 30px
+
+.about
 
 	iframe
 		width: 100%
@@ -443,10 +445,6 @@
 
 
 .access
-	padding: 30px
-	background-color: #fff
-	border-radius: 5px
-	margin-bottom: 30px
 	
 	&__price
 		display: flex
@@ -504,11 +502,6 @@
 
 
 .profile
-	padding: 30px
-	background-color: #fff
-	border-radius: 5px
-	margin-bottom: 30px
-
 	&__form
 		display: flex
 		justify-content: space-between
@@ -556,6 +549,251 @@
 				margin-right: 40px
 
 
+.project
 
+	&__content
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		margin-bottom: 50px
+		font-size: 16px
+
+		h2
+			font-weight: 900
+
+		&_slider
+			width: 55%
+
+			img
+				max-width: 100%
+				width: 100%
+				border-radius: 5px
+				z-index: -1
+
+		&_info
+			width: 40%
+
+			&--line
+				display: flex
+				align-items: center
+				flex-wrap: wrap
+				margin-bottom: 20px
+
+				img
+					margin-right: 5px
+
+			span
+				color: $text--light
+
+			ul
+				margin-bottom: 25px
+
+			li
+				position: relative
+				margin-bottom: 10px
+				padding-left: 25px
+
+				&:last-child
+					margin-bottom: 0
+
+				img
+					position: absolute
+					top: 50%
+					left: 0
+					transform: translate(0, -50%)
+
+		&_btn
+			margin-bottom: 25px
+
+		&_label
+			display: inline-block
+			padding: 5px 30px
+			border-radius: 5px
+			box-shadow: 0 0 5px 0 rgba($text, .3)
+			font-size: 14px
+			color: #fff
+			line-height: 1
+			margin-right: 30px
+
+			&--green
+				background-color: $green
+
+			&--blue
+				background-color: $blue
+
+			&--purge
+				background-color: $purple
+
+			&--red
+				background-color: $accent
+
+			&--dark
+				background-color: $text
+		
+		&_form
+			p
+				margin-bottom: 10px
+
+			&--btn
+				display: flex
+				justify-content: flex-end
+
+	&__info
+		display: flex
+		margin-bottom: 30px
+
+		ul
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			width: 100%
+
+		li
+			display: flex
+			align-items: center
+			width: 47%
+			margin-bottom: 8px
+
+		span
+			color: $text--light
+			margin-right: 5px
+
+		&_list,
+		&_future
+			max-width: 500px
+			width: 100%
+
+		&_future
+
+			img
+				margin-right: 5px
+
+		&_list
+			li
+				&::before
+					content: ''
+					display: block
+					width: 8px
+					height: 8px
+					margin-right: 10px
+					border-radius: 50%
+					background-color: $accent
+
+	&__description
+		width: 50%
+
+		p
+			margin-bottom: 15px
+			font-size: 16px
+			color: $text--light
+
+			&:last-child
+				margin-bottom: 0
+
+		b
+			color: $text
+
+		iframe
+			height: 320px
+			width: 100%
+			margin-bottom: 45px
+	
+	&__top
+		margin-bottom: 15px
+
+		.swiper-button-disabled
+			opacity: .7
+
+	&__thumbs
+		.swiper-slide-thumb-active
+			&::before
+				content: ''
+				position: absolute
+				right: 0
+				left: 0
+				top: 0
+				bottom: 0
+				display: block
+				background-color: rgba($accent, .5)
+
+	&__pagination
+		color: #fff
+		font-weight: 700
+		text-align: right
+		padding: 0 20px
+		bottom: 20px
+
+	&__next,
+	&__prev
+		width: 30px
+		height: 50px
+		background-color: rgba(#fff, .7)
+		transition: all .6s
+
+		&:after
+			display: none
+
+		span
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -40%)
+			display: block
+			width: 15px
+			height: 2px
+			background-color: $text
+			transition: all .6s
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				transition: all .6s
+
+		&:hover,
+		&:focus
+			background-color: $accent
+
+			span
+				background-color: #fff
+	
+	&__next
+		right: 0
+
+		&:hover
+			span
+				&::before
+					border-left: 3px solid #fff
+
+
+		span
+			&::before
+				left: 100%
+				transform: translate(0, -50%)
+				border-bottom: 3px solid transparent
+				border-left: 3px solid $text
+				border-right: 3px solid transparent
+				border-top: 3px solid transparent
+
+	&__prev
+		left: 0
+
+		&:hover
+			span
+				&::before
+					border-right: 3px solid #fff
+
+		span
+			&::before
+				right: 100%
+				transform: translate(0, -50%)
+				border-bottom: 3px solid transparent
+				border-left: 3px solid transparent
+				border-right: 3px solid $text
+				border-top: 3px solid transparent
+	
 
 @import "media" // Always at the end

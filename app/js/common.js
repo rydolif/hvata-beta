@@ -37,30 +37,38 @@ $(function() {
       }
   });
 
-//-------------------------------certificate slider---------------------------------------
-	var swiper = new Swiper('.certificate__slider', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: '.certificate__pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.certificate__next',
-        prevEl: '.certificate__prev',
-      },
-      breakpoints: {
-	    992: {
-	      slidesPerView: 2,
-	      spaceBetween: 20
-	    },
-	    480: {
-	      slidesPerView: 1,
-	      spaceBetween: 20
-	    },
-	  }
-    });
-
+//-------------------------------slider---------------------------------------
+  var galleryThumbs = new Swiper('.project__thumbs', {
+    spaceBetween: 15,
+    slidesPerView: 5,
+    freeMode: true,
+    loopedSlides: 5,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    pagination: {
+      el: '.project__pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.project__next',
+      prevEl: '.project__prev',
+    },
+  });
+  var galleryTop = new Swiper('.project__top', {
+    spaceBetween: 40,
+    loopedSlides: 5,
+    pagination: {
+      el: '.project__pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.project__next',
+      prevEl: '.project__prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
 
 //-------------------------скорость якоря---------------------------------------
 	$(".click").on("click","a", function (event) {
