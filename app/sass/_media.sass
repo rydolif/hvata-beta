@@ -47,6 +47,11 @@
 	.pagination
 		padding: 30px 0
 	
+	.about
+		iframe
+			height: 480px
+			margin-bottom: 20px
+
 
 @media only screen and (max-width : 992px)
 	body
@@ -119,6 +124,16 @@
 					&:last-child
 						margin-bottom: 0
 
+	.about
+		padding: 15px
+
+		iframe
+			height: 400px
+			margin-bottom: 15px
+
+		&__block
+			width: 100%
+
 
 @media only screen and (max-width : 767px)
 	.object
@@ -160,6 +175,9 @@
 			text-align: center
 			justify-content: center
 
+	.about
+		iframe
+			height: 320px
 
 @media only screen and (max-width : 576px)
 	.object__img_label
@@ -167,6 +185,10 @@
 		
 	.nav
 		padding: 40px
+
+	.about
+		iframe
+			height: 280px
 
 
 @media only screen and (max-width : 480px)
@@ -179,5 +201,23 @@
 				transform: translate(0, 0)
 				top: 0
 				left: 0
+
+	.about
+		iframe
+			height: 220px
+
+		&__block
+			&_header
+				padding: 10px
+
+			&_content
+				padding: 10px
+
+
+@media only screen and (max-width : 380px)
+
+	.about
+		iframe
+			height: 200px
 
 
