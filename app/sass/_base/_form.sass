@@ -1,36 +1,113 @@
-.form
-	label.error
+label.error
+	position: absolute
+	bottom: -25px
+	right: 25px
+	left: 25px
+	transition: all .3s
+	animation: error .3s linear 1 forwards
+	color: #fff
+	text-align: center
+	font-weight: 600
+	background-color: red
+	border-radius: 10px
+	font-size: 12px
+
+	&::before
+		content: ''
 		position: absolute
-		bottom: -25px
-		right: 25px
-		left: 25px
-		transition: all .3s
-		animation: error .3s linear 1 forwards
-		color: #fff
-		text-align: center
-		font-weight: 600
-		background-color: red
-		border-radius: 10px
-		font-size: 12px
+		left: 50%
+		top: -8px
+		margin-left: -2px
+		border-bottom: 4px solid red
+		border-left: 4px solid transparent
+		border-right: 4px solid transparent
+		border-top: 4px solid transparent
 
-		&::before
-			content: ''
-			position: absolute
-			left: 50%
-			top: -8px
-			margin-left: -2px
-			border-bottom: 4px solid red
-			border-left: 4px solid transparent
-			border-right: 4px solid transparent
-			border-top: 4px solid transparent
+input, select
+	height: 45px
+	line-height: 45px
+	letter-spacing: 2px
 
-	div
-		position: relative
+input, textarea, select
+	border: 1px solid #ddd
+	border-radius: 5px
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	background-color: transparent
+	width: 100%
+	font-size: 16px
+	background-color: #f6f6f6
+	color: $text
+	transition: all .6s
+	padding: 0 15px
 
-	label
-		font-size: 12px
-		margin-bottom: 3px
-		color: #fff
+	&:focus:required:invalid
+		border-color: $accent
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
 
-		span
-			color: red
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: #a4a4a4
+		line-height: 45px
+		font-weight: 400
+		letter-spacing: 2px
+
+textarea
+	resize: none
+	height: 100px
+	padding-top: 10px
+	line-height: 1.4
+
+	&::placeholder
+		line-height: 1.4
+
+
+.label
+	position: relative
+	padding-left: 25px
+	cursor: pointer
+	margin-bottom: 0 !important
+	margin-right: 0
+	line-height: 1
+	font-weight: 400 !important
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+
+	&::before
+		width: 15px
+		height: 15px
+		border-radius: 3px
+		border: 2px solid $accent
+
+	&::after
+		width: 9px
+		height: 9px
+		border-radius: 3px
+		background: $accent
+		left: 3px
+		top: 3px
+		transition: all .6s
+
+input[type="checkbox"]
+	display: none
+
+input[type="checkbox"]:checked + label::after
+	transform: scale(1)
+
+input[type="checkbox"] + label::after
+	transform: scale(0)
+
+
+
